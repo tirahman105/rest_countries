@@ -27,10 +27,23 @@ const displayCountries = countries => {
 } */
 
 
-// Option 2 
-const getCountryHTML = country => {
+// destructuring  Option 2 
+/* const getCountryHTML = country => {
 
     const {name, flags, capital} = country
+    return `
+        <div class= "country">
+            <h2> ${name.common}</h2>
+            <img src="${flags.png}" >
+            <h3> Capital : ${capital} <h3>
+        </div>
+    `
+} */
+
+
+//destructuring option 3 
+const getCountryHTML = ({name, flags, capital}) => {
+
     return `
         <div class= "country">
             <h2> ${name.common}</h2>
