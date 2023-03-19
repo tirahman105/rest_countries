@@ -14,12 +14,28 @@ const displayCountries = countries => {
     container.innerHTML = countriesHTML.join(' ');
 }
 
-const getCountryHTML = country => {
+
+// Normal system of getting data from country 
+/* const getCountryHTML = country => {
     return `
         <div class= "country">
             <h2> ${country.name.common}</h2>
             <img src="${country.flags.png}" >
             <h3> Capital : ${country.capital} <h3>
+        </div>
+    `
+} */
+
+
+// Option 2 
+const getCountryHTML = country => {
+
+    const {name, flags, capital} = country
+    return `
+        <div class= "country">
+            <h2> ${name.common}</h2>
+            <img src="${flags.png}" >
+            <h3> Capital : ${capital} <h3>
         </div>
     `
 }
