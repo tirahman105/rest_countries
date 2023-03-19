@@ -41,7 +41,7 @@ const displayCountries = countries => {
 } */
 
 
-//destructuring option 3 
+//destructuring option 3 .
 const getCountryHTML = ({name, flags, capital}) => {
 
     return `
